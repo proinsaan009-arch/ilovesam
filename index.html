@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f3ef">
+  <meta name="description" content="A little corner of the internet, made for Sam.">
+  <title>For Sam, with love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <header class="topbar"><a class="brand" href="#home" aria-label="Back to top">♡ <span>MINE BTW</span></a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav"><a href="#reasons">little things</a><a href="#memories">memories</a><a href="#letter">a letter</a><a class="nav-cta" href="#surprises">(smoll)surprises<span>↗</span></a></nav></header>
+  <main>
+    <section class="hero" id="home"><div class="hero-copy"><p class="eyebrow"><span class="tiny-heart">♥</span> a website for us and us only...</p><h1>♡ <span>Sam</span> ♡</h1><p class="hero-sub">A small collection of the things I never want you to forget.</p><a class="button button-dark" href="#reasons">Come on in <span>↓</span></a><p class="hero-note">made with all my love, deep from heart</p></div><div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="flower flower-one">✿</div><div class="flower flower-two">✿</div><div class="art-caption">you make everyday<br> my fav mwah </div></div><div class="hero-scroll">SCROLL A LITTLE <span>↓</span></div></section>
+    <section class="intro section-pad"><p class="eyebrow">TO MY FAVORITE PERSON</p><h2>Some things are better<br>when they're <em>said out loud.</em></h2><p class="intro-copy">So here's a little place to keep them—every reason, every memory, every tiny thing that makes me think of you.</p><div class="divider-heart">— ♡ —</div></section>
+    <section class="reasons section-pad" id="reasons"><div class="section-heading"><div><p class="eyebrow">THE LITTLE THINGS</p><h2>Reasons I <em>love you</em></h2></div><p class="section-aside">Tap a card.<br>There's always another reason.</p></div><div class="reason-grid" id="reason-grid"></div><p class="below-note">And a hundred more I don't have room to fit here. <span>♡</span></p></section>
+    <section class="memories section-pad" id="memories"><div class="section-heading"><div><p class="eyebrow">KEPT CLOSE</p><h2>Our <em>memories</em></h2></div><p class="section-aside">A few little moments<br>worth keeping forever.</p></div><div class="memory-grid" id="memory-grid"></div></section>
+    <section class="song-band"><div class="song-orb">♫</div><div><p class="eyebrow">SOUNDTRACK OF US</p><h2>Press play on <em>us.</em></h2><p>A few songs that feel like you, like me, like us.</p></div><a class="button button-outline" id="playlist-link" href="#" target="_blank" rel="noreferrer"><svg class="spotify-logo" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M5.2 9.2c4.6-1.4 9.7-.9 13.5 1.3M6.1 12.4c3.9-1.1 8-.7 11.4 1.1M7 15.4c3.1-.8 6.4-.5 9.2.9"/></svg><span class="playlist-label">Open our playlist</span><span class="playlist-arrow">↗</span></a></section>
+    <section class="letter section-pad" id="letter"><div class="letter-stamp">WITH<br>LOVE <span>♡</span></div><div class="letter-content"><p class="eyebrow">WHEN WORDS NEED MORE ROOM</p><h2>A letter, <em>just for you.</em></h2><button class="letter-reveal-button" id="letter-open" aria-expanded="false" aria-controls="letter-reveal"><span class="letter-button-hearts" aria-hidden="true"><i>♡</i><i>♥</i><i>♡</i></span><span class="letter-button-label">Read my letter</span><span class="letter-button-icon" aria-hidden="true">♡</span></button><div class="letter-reveal" id="letter-reveal" aria-hidden="true"><div class="heart-burst" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span></div><div class="letter-reveal-paper"><p class="eyebrow">A LITTLE NOTE FOR YOU</p><div class="revealed-letter" id="revealed-letter"></div></div></div></div><div class="letter-mark" aria-hidden="true">“</div></section>
+    <section class="countdown section-pad"><p class="eyebrow">SOMETHING TO LOOK FORWARD TO</p><h2>Until <em>our day.</em></h2><p class="countdown-date">19 September 2027</p><div class="countdown-box"><div class="countdown-big"><span id="days-left">—</span><small>days to go</small></div><div class="countdown-units"><div><b id="hours">00</b><small>hours</small></div><i>:</i><div><b id="minutes">00</b><small>minutes</small></div><i>:</i><div><b id="seconds">00</b><small>seconds</small></div></div></div><p class="elapsed" id="elapsed"></p><p class="countdown-foot">The best days are still ahead <span>♡</span></p></section>
+    <section class="surprises section-pad" id="surprises"><div class="section-heading"><div><p class="eyebrow">JUST BECAUSE</p><h2>Little <em>surprises</em></h2></div><p class="section-aside">For whenever you need<br>a tiny reminder.</p></div><div class="surprise-grid" id="surprise-grid"></div></section>
+    <section class="final-note"><div class="final-sparkle">✳</div><p class="eyebrow">ONE LAST THING</p><h2>In case I haven't said it<br><em>enough today...</em></h2><button class="button button-light" id="final-button">Tap for a secret <span>♡</span></button><p class="final-hidden" id="final-hidden" hidden></p><div class="final-sign">Always yours <span>♡</span></div></section>
+  </main>
+  <footer><span>made for Sam, with love</span><span>♡</span><a href="#home">back to the top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
