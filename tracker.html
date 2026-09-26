@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f8f3ef"><meta name="robots" content="noindex, nofollow">
+<title>Cycle notes — for Sam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="tracker.css"></head>
+<body class="tracker-page">
+<header class="topbar"><a class="brand" href="index.html">♡ <span>back to us</span></a><div class="tracker-top-actions"><button class="small-link" id="lock-tracker" type="button" hidden>Lock tracker</button><a class="nav-cta tracker-back" href="index.html">love site <span>↗</span></a></div></header>
+<section class="tracker-auth" id="tracker-auth" aria-labelledby="auth-title"><div class="auth-card"><p class="eyebrow">A PRIVATE LITTLE SPACE</p><h1 id="auth-title">Unlock cycle notes</h1><p class="auth-copy" id="auth-copy">Enter your shared passphrase to continue.</p><form id="login-form" class="auth-form"><label>Shared passphrase<input id="login-passcode" type="password" autocomplete="current-password" minlength="14" required></label><button class="tracker-button" type="submit">Unlock notes <span>♡</span></button></form><form id="setup-form" class="auth-form" hidden><label>Secret phrase<input id="setup-phrase" type="password" autocomplete="new-password" minlength="20" required></label><button class="tracker-button" type="submit">Set this as our passcode <span>♡</span></button></form><p class="auth-feedback" id="auth-feedback" role="status" aria-live="polite"></p></div></section>
+<main class="tracker-main" id="tracker-content" hidden>
+<section class="cycle-hero phase-menstrual" id="phase-card" aria-live="polite">
+<p class="eyebrow">A LITTLE SPACE FOR YOU</p><p class="phase-kicker" id="phase-kicker">YOUR CYCLE, YOUR NOTES</p>
+<h1 id="phase-name">Your cycle, gently.</h1><p class="phase-description" id="phase-description">Log a period start to see an estimated phase here.</p>
+<p class="phase-day" id="phase-day"></p><p class="phase-caveat">Phase and next-period dates are estimates from the dates logged here.</p><div class="phase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+</section>
+<section class="cycle-summary" aria-label="Cycle overview">
+<div><span class="summary-label">NEXT PERIOD · ESTIMATE</span><strong id="next-period">—</strong></div><div><span class="summary-label">CYCLE LENGTH USED</span><strong><span id="cycle-length-display">28</span> days</strong></div><div><span class="summary-label">LOGGED CYCLES</span><strong id="cycle-count">0</strong></div>
+</section>
+<div class="tracker-grid">
+<section class="tracker-panel"><p class="eyebrow">KEEP A RECORD</p><h2>Period <em>log</em></h2>
+<form id="period-form" class="tracker-form"><label>Period started<input id="period-start" type="date" required></label><label>Period ended <span class="optional">(optional)</span><input id="period-end" type="date"></label><button class="tracker-button" type="submit">Save period dates <span>♡</span></button></form>
+<form id="flow-form" class="tracker-form flow-form"><p class="flow-label">Daily flow log</p><label>Date<input id="flow-date" type="date" required></label><fieldset class="flow-choices"><legend>Flow for this day</legend><label><input type="radio" name="flow" value="Spotting" required><span>Spotting</span></label><label><input type="radio" name="flow" value="Light"><span>Light</span></label><label><input type="radio" name="flow" value="Medium"><span>Medium</span></label><label><input type="radio" name="flow" value="Heavy"><span>Heavy</span></label><label><input type="radio" name="flow" value="No bleeding"><span>No bleeding</span></label></fieldset><button class="tracker-button" type="submit">Save daily flow <span>♡</span></button></form>
+<div class="history-heading"><h3>Recent flow logs</h3><button class="small-link" id="clear-flows" type="button">Clear history</button></div><ul class="flow-list" id="flow-list"><li class="empty-state">Daily flow entries will show here.</li></ul>
+<div class="history-heading"><h3>Recent period entries</h3><button class="small-link" id="clear-periods" type="button">Clear history</button></div><ul class="period-list" id="period-list"><li class="empty-state">Your saved period dates will show here.</li></ul></section>
+<section class="tracker-panel"><p class="eyebrow">A CHECK-IN WITH YOURSELF</p><h2>Daily <em>mood</em></h2>
+<form id="mood-form" class="tracker-form"><label>Date<input id="mood-date" type="date" required></label>
+<fieldset class="mood-choices"><legend>How are you feeling today?</legend>
+<label><input type="radio" name="mood" value="Lovely" required><span>☺</span><small>Lovely</small></label><label><input type="radio" name="mood" value="Okay"><span>🙂</span><small>Okay</small></label><label><input type="radio" name="mood" value="Low"><span>☁</span><small>Low</small></label><label><input type="radio" name="mood" value="Tender"><span>♡</span><small>Tender</small></label><label><input type="radio" name="mood" value="Frustrated"><span>〰</span><small>Frustrated</small></label></fieldset>
+<label>A note for yourself <span class="optional">(optional)</span><textarea id="mood-note" rows="3" maxlength="500" placeholder="Anything you want to remember about today…"></textarea></label><button class="tracker-button" type="submit">Save today’s check-in <span>♡</span></button></form>
+<div class="history-heading"><h3>Recent check-ins</h3><button class="small-link" id="clear-moods" type="button">Clear history</button></div><ul class="mood-list" id="mood-list"><li class="empty-state">Your mood notes will show here.</li></ul></section>
+</div>
+<details class="tracker-settings"><summary>Cycle settings</summary><div class="settings-content">
+<label>Usual cycle length in days<input id="cycle-length" type="number" min="18" max="45" value="28"></label><label>Usual period length in days<input id="period-length" type="number" min="1" max="12" value="5"></label><button class="tracker-button" id="save-settings" type="button">Save settings</button>
+<p>Estimates use these settings and your logged period dates. Cycles vary; this isn’t a medical tool or a way to predict fertility or prevent pregnancy.</p><div class="passcode-change"><h3>Change shared passphrase</h3><form id="change-passcode-form" class="tracker-form"><label>Current passphrase<input id="current-passcode" type="password" autocomplete="current-password" required></label><label>New passphrase<input id="changed-passcode" type="password" minlength="14" autocomplete="new-password" required></label><label>Confirm new passphrase<input id="confirm-changed-passcode" type="password" minlength="14" autocomplete="new-password" required></label><button class="tracker-button" type="submit">Update passphrase <span>♡</span></button><p id="passcode-feedback" class="passcode-feedback" role="status"></p></form></div></div></details>
+<p class="tracker-privacy-note">Shared entries are available to anyone who knows the passphrase. Use a private passphrase and don’t reuse an important account password.</p>
+</main><footer><span>made with care ♡</span><a href="index.html">back to the love site ↑</a></footer><script src="tracker.js"></script></body></html>
